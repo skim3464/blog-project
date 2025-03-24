@@ -175,12 +175,7 @@ export default function Home() {
           {/* Calendar Widget */}
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
             <h3 className="text-xl font-playfair font-bold text-gray-900 mb-4">Calendar</h3>
-            <Calendar 
-              events={events} 
-              onAddEvent={handleAddEvent}
-              onUpdateEvent={handleUpdateEvent}
-              onDeleteEvent={handleDeleteEvent}
-            />
+            <Calendar />
           </div>
 
           {/* Categories Widget */}

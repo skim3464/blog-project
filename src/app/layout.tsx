@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
@@ -27,12 +28,17 @@ export default function RootLayout({
                 </a>
               </div>
               <div className="flex items-center">
-                <ul className="flex space-x-8">
-                  <li><a href="/" className="text-gray-600 hover:text-gray-900">Home</a></li>
-                  <li><a href="/blog" className="text-gray-600 hover:text-gray-900">Blog</a></li>
-                  <li><a href="/about" className="text-gray-600 hover:text-gray-900">About</a></li>
-                  <li><a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a></li>
-                </ul>
+                <nav className="hidden md:flex space-x-8">
+                  <Link href="/" className="text-gray-700 hover:text-blue-600">
+                    Home
+                  </Link>
+                  <Link href="/about" className="text-gray-700 hover:text-blue-600">
+                    About
+                  </Link>
+                  <Link href="/contact" className="text-gray-700 hover:text-blue-600">
+                    Contact
+                  </Link>
+                </nav>
               </div>
             </div>
           </nav>
