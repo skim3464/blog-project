@@ -98,8 +98,6 @@ export default function Calendar() {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">Calendar</h2>
-      
       <div className="space-y-4">
         <div className="border rounded-lg overflow-hidden">
           <div className="flex justify-between items-center p-2 bg-gray-50 border-b">
@@ -136,11 +134,11 @@ export default function Calendar() {
 
           <div className="space-y-2">
             {events.map((event) => (
-              <div key={event.id} className="border rounded-lg p-4">
-                <h3 className="font-semibold text-lg">{event.title}</h3>
-                <p className="text-gray-600">{new Date(event.date).toLocaleDateString()}</p>
+              <div key={event.id} className="border rounded-lg p-3">
+                <h3 className="font-inter text-sm font-medium text-gray-700">{event.title}</h3>
+                <p className="font-inter text-xs text-gray-500">{new Date(event.date).toLocaleDateString()}</p>
                 {event.description && (
-                  <p className="text-gray-700 mt-2">{event.description}</p>
+                  <p className="font-inter text-xs text-gray-600 mt-1">{event.description}</p>
                 )}
               </div>
             ))}
